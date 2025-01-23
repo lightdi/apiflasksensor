@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sensor Data</title>
+    </head>
+
+    <body>
+        <h1>Ultrasonic Sensor Data</h1>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Distance (cm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in dados_sensor %}
+                <tr>
+                    <td>{{ data.id }}</td>
+                    <td>{{ data.distancia }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
