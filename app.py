@@ -33,6 +33,5 @@ def index():
     data = DadosSensor.query.all()  # Fetch all data from the DadosSensor table
     return render_template('index.html', dados_sensor=data)
 
-#if __name__ == '__main__':
-#    app.run()
-    #app.run(host='192.168.1.185', port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(host='192.168.0.101', port=5000, debug=True)

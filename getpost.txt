@@ -1,0 +1,4 @@
+ Invoke-WebRequest -Uri "https://sensor-ge41.onrender.com/api/sensor" `
+                   -Method POST `
+                   -Headers @{ "Content-Type" = "application/json" } `
+                   -Body '{ "distancia": 70 }'
