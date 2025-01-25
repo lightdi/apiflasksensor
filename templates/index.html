@@ -4,22 +4,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sensor Data</title>
+        <meta http-equiv="refresh" content="5">
     </head>
 
     <body>
+
         <h1>Ultrasonic Sensor Data</h1>
         <table border="1" cellspacing="0" cellpadding="5">
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Equipe</th>
                     <th>Distance (cm)</th>
+                    <th>Envio</th>
                 </tr>
             </thead>
             <tbody>
                 {% for data in dados_sensor %}
                 <tr>
                     <td>{{ data.id }}</td>
+                    <td>{{ data.equipe }}</td>
                     <td>{{ data.distancia }}</td>
+                    <td>{{ data.envio }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
