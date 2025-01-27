@@ -6,18 +6,20 @@
 const char * ssid = "Integra";
 const char * password = "Integra2023";
 
-String serverName = "http://192.168.0.101:5000/api/sensor";
+
+String ipLocal = "192.168.0.101";
+String portaLocal = "5000"
+
+String serverName = "http://" + ipLocal + ":" + portaLocal + "/api/sensor";
 
 const int trigPin = 12;
 const int echoPin = 14;
 
 //define sound velocity in cm/uS
 #define SOUND_VELOCITY 0.034
-#define CM_TO_INCH 0.393701
 
 long duration;
 float distanceCm;
-float distanceInch;
 
 void setup() {
   Serial.begin(9600); // Starts the serial communication
@@ -53,14 +55,9 @@ void loop() {
   // Calculate the distance
   distanceCm = duration * SOUND_VELOCITY/2;
   
-  // Convert to inches
-  distanceInch = distanceCm * CM_TO_INCH;
-  
   // Prints the distance on the Serial Monitor
   Serial.print("Distance (cm): ");
   Serial.println(distanceCm);
-  Serial.print("Distance (inch): ");
-  Serial.println(distanceInch);
 
   // Verifica se o esp está conectado
   if (WiFi.status() == WL_CONNECTED) {  

@@ -4,6 +4,8 @@ import sqlite3 as sqlite
 
 app = Flask(__name__)
 
+ip_local = '127.0.0.1'
+porta_Local = 5000
 
 def cria_tabela():
     conn = sqlite.connect('db.sqlite')
@@ -73,4 +75,4 @@ def index():
     return render_template('index.html', dados_sensor=dados)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    app.run(host=ip_local, port=porta_Local, debug=True)
