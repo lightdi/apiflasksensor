@@ -8,7 +8,9 @@ const char * password = "Integra2023";
 
 
 String ipLocal = "192.168.0.101";
-String portaLocal = "5000"
+String portaLocal = "5000";
+
+String eqipe = "1";
 
 String serverName = "http://" + ipLocal + ":" + portaLocal + "/api/sensor";
 
@@ -69,7 +71,7 @@ void loop() {
   // Specify content-type header
     http.addHeader("Content-Type", "application/json");
     // Data to send with HTTP POST
-    String httpRequestData = "{\"distancia\":" + String(distanceCm) + "}";       
+    String httpRequestData = "{\"distancia\":" + String(distanceCm) + ", \"equipe\":" + String(equipe) + "}";       
     // Send HTTP POST request
     int httpResponseCode = http.POST(httpRequestData);
     //fechando a conexão
