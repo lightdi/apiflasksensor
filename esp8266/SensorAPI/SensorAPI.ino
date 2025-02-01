@@ -10,7 +10,7 @@ const char * password = "Integra2023";
 String ipLocal = "192.168.0.101";
 String portaLocal = "5000";
 
-String eqipe = "1";
+String equipe = "1";
 
 String serverName = "http://" + ipLocal + ":" + portaLocal + "/api/sensor";
 
