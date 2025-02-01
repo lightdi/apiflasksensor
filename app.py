@@ -4,8 +4,8 @@ import sqlite3 as sqlite
 
 app = Flask(__name__)
 
-ip_local = '192.168.0.107'
-porta_Local = 80
+ip_local = '192.168.68.57'
+porta_Local = 5000
 
 def cria_tabela():
     conn = sqlite.connect('db.sqlite')

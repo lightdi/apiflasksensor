@@ -3,14 +3,14 @@
 #include <ESP8266HTTPClient.h>
 
 
-const char * ssid = "Integra";
-const char * password = "Integra2023";
+const char * ssid = "Lightdi";
+const char * password = "!Lightdi1664";
 
 
-String ipLocal = "192.168.0.101";
+String ipLocal = "192.168.68.57";
 String portaLocal = "5000";
 
-String equipe = "1";
+String equipe = "Equipe-Adson";
 
 String serverName = "http://" + ipLocal + ":" + portaLocal + "/api/sensor";
 
@@ -71,7 +71,7 @@ void loop() {
   // Specify content-type header
     http.addHeader("Content-Type", "application/json");
     // Data to send with HTTP POST
-    String httpRequestData = "{\"distancia\":" + String(distanceCm) + ", \"equipe\":" + String(equipe) + "}";       
+    String httpRequestData = "{\"distancia\":" + String(distanceCm) + ", \"equipe\":\"" + String(equipe) + "\"}";       
     // Send HTTP POST request
     int httpResponseCode = http.POST(httpRequestData);
     //fechando a conexão
